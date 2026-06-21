@@ -1,0 +1,207 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "last_updated": "2026-06-14",
+    "notes": "Source of truth for all resume content. Add new bullets here as you recall more work. The app selects and filters this pool per JD — nothing here appears on a resume unless selected."
+  },
+
+  "contact": {
+    "name": "Dex Joseph",
+    "email": "dexthedeveloper@gmail.com",
+    "github": "",
+    "linkedin": "",
+    "location": "New York, NY"
+  },
+
+  "summary_variants": [
+    {
+      "id": "backend-infra-general",
+      "tags": ["backend", "infrastructure", "distributed-systems", "automation", "cicd"],
+      "text": "Backend and infrastructure engineer with experience building distributed systems, automating deployment pipelines, and modernizing platform infrastructure at enterprise scale. Track record of reducing operational overhead through automation and owning critical systems across multi-region production environments at Nomura and Spotify."
+    },
+    {
+      "id": "caching-datastore-focused",
+      "tags": ["backend", "caching", "redis", "valkey", "distributed-systems", "high-availability", "observability", "kubernetes", "go", "python"],
+      "text": "Backend and infrastructure engineer with hands-on experience designing and operating large-scale distributed caching systems using Valkey and Redis. Track record of end-to-end ownership across in-memory datastore architecture, multi-region deployment, and production reliability at enterprise scale. Experienced in Go, Python, and Kubernetes, with a focus on high-availability, observability, and infrastructure automation."
+    },
+    {
+      "id": "cloud-native-platform",
+      "tags": ["infrastructure", "platform", "cloud", "aws", "kubernetes", "terraform", "ansible", "cicd", "go", "devops"],
+      "text": "Infrastructure and platform engineer with experience building and operating cloud-native systems at enterprise scale. Deep hands-on background in Go, AWS, Kubernetes, Terraform, and Ansible, with a track record of end-to-end ownership across CI/CD pipelines, deployment automation, and distributed infrastructure. Early adopter of AI tooling in engineering workflows."
+    }
+  ],
+
+  "skills": [
+    { "name": "Go",              "category": "Languages",      "tags": ["go", "golang", "backend", "microservices", "api"] },
+    { "name": "Python",          "category": "Languages",      "tags": ["python", "backend", "scripting", "automation"] },
+    { "name": "TypeScript",      "category": "Languages",      "tags": ["typescript", "javascript", "frontend", "backend"] },
+    { "name": "C# / .NET",       "category": "Languages",      "tags": ["csharp", "dotnet", "backend", "enterprise"] },
+    { "name": "Java",            "category": "Languages",      "tags": ["java", "backend", "grpc"] },
+    { "name": "Scala",           "category": "Languages",      "tags": ["scala", "backend", "functional"] },
+    { "name": "PowerShell",      "category": "Languages",      "tags": ["powershell", "scripting", "windows", "automation"] },
+    { "name": "Bash",            "category": "Languages",      "tags": ["bash", "shell", "scripting", "linux", "automation"] },
+
+    { "name": "Kubernetes",      "category": "Infrastructure", "tags": ["kubernetes", "k8s", "eks", "rancher", "containers", "orchestration", "infrastructure", "devops"] },
+    { "name": "AWS",             "category": "Infrastructure", "tags": ["aws", "cloud", "ec2", "eks", "infrastructure"] },
+    { "name": "GCP",             "category": "Infrastructure", "tags": ["gcp", "google-cloud", "cloud", "bigtable", "cloudsql"] },
+    { "name": "Terraform",       "category": "Infrastructure", "tags": ["terraform", "iac", "infrastructure-as-code", "infrastructure", "devops"] },
+    { "name": "Helm",            "category": "Infrastructure", "tags": ["helm", "kubernetes", "k8s", "infrastructure"] },
+    { "name": "Docker",          "category": "Infrastructure", "tags": ["docker", "containers", "infrastructure"] },
+    { "name": "Ansible",         "category": "Infrastructure", "tags": ["ansible", "automation", "infrastructure", "devops", "configuration-management"] },
+    { "name": "GitLab CI",       "category": "Infrastructure", "tags": ["gitlab", "cicd", "ci", "devops", "pipelines"] },
+    { "name": "Jenkins",         "category": "Infrastructure", "tags": ["jenkins", "cicd", "ci", "devops", "pipelines"] },
+    { "name": "Autosys",         "category": "Infrastructure", "tags": ["autosys", "scheduling", "automation", "enterprise"] },
+
+    { "name": "Valkey / Redis",  "category": "Data & Caching", "tags": ["valkey", "redis", "caching", "in-memory", "distributed-cache", "datastore"] },
+    { "name": "SQL",             "category": "Data & Caching", "tags": ["sql", "relational", "database", "postgres", "mysql"] },
+    { "name": "KDB",             "category": "Data & Caching", "tags": ["kdb", "timeseries", "database", "finance"] },
+    { "name": "Bigtable",        "category": "Data & Caching", "tags": ["bigtable", "gcp", "nosql", "database"] },
+    { "name": "CloudSQL",        "category": "Data & Caching", "tags": ["cloudsql", "gcp", "sql", "relational", "database"] },
+    { "name": "Solace",          "category": "Data & Caching", "tags": ["solace", "messaging", "pubsub", "event-driven"] },
+
+    { "name": "Distributed tracing",        "category": "Observability", "tags": ["distributed-tracing", "observability", "monitoring", "telemetry"] },
+    { "name": "Production monitoring",       "category": "Observability", "tags": ["monitoring", "observability", "alerting", "production", "on-call"] },
+    { "name": "Telemetry pipelines",         "category": "Observability", "tags": ["telemetry", "observability", "monitoring", "infrastructure"] },
+
+    { "name": "React",           "category": "Frontend", "tags": ["react", "frontend", "javascript", "typescript", "ui"] },
+    { "name": "Vite",            "category": "Frontend", "tags": ["vite", "frontend", "build-tools", "javascript"] }
+  ],
+
+  "bullets": [
+
+    {
+      "id": "nomura-caching",
+      "company": "Nomura",
+      "title": "Software Engineer",
+      "dates": "Apr 2023 – Present",
+      "label": "Multi-Region Distributed Caching",
+      "text": "Architected and implemented a large-scale distributed caching layer in Go and C#/.NET using Valkey (Redis-compatible) with consistent hashing and data sharding across New York and Tokyo production environments. Designed the cluster topology, sharding strategy, and failover behavior, achieving a 99.99% cache hit rate across 4.1M+ requests with continuous 24/7 uptime requirements.",
+      "tags": ["caching", "redis", "valkey", "go", "golang", "csharp", "dotnet", "distributed-systems", "distributed-cache", "high-availability", "sharding", "backend", "infrastructure", "multi-region"],
+      "quantified": true,
+      "priority": 10
+    },
+
+    {
+      "id": "nomura-platform-modernization",
+      "company": "Nomura",
+      "title": "Software Engineer",
+      "dates": "Apr 2023 – Present",
+      "label": "Platform Modernization",
+      "text": "Built Go-based authentication microservices with clean API contracts, authored Helm charts and Dockerfiles for containerized deployment on a Rancher Kubernetes cluster, and managed cloud infrastructure provisioning across AWS and GCP using Terraform and Ansible — owning the full lifecycle from service design through production rollout.",
+      "tags": ["go", "golang", "microservices", "kubernetes", "k8s", "helm", "docker", "containers", "terraform", "ansible", "aws", "gcp", "infrastructure", "devops", "backend", "api"],
+      "quantified": false,
+      "priority": 9
+    },
+
+    {
+      "id": "nomura-cicd",
+      "company": "Nomura",
+      "title": "Software Engineer",
+      "dates": "Apr 2023 – Present",
+      "label": "Deployment Pipeline Overhaul",
+      "text": "Redesigned the end-to-end CI/CD pipeline using Ansible, GitLab CI, Jenkins, and Terraform, reducing deployment time from 6–8 hours to ~1.5 hours (~80% reduction) across hundreds of production services. Introduced symlink-based parallel deployment for near-zero downtime rollouts across Linux and Windows infrastructure.",
+      "tags": ["cicd", "ci-cd", "pipelines", "ansible", "gitlab", "jenkins", "terraform", "devops", "automation", "infrastructure", "linux", "windows"],
+      "quantified": true,
+      "priority": 9
+    },
+
+    {
+      "id": "nomura-release-automation",
+      "company": "Nomura",
+      "title": "Software Engineer",
+      "dates": "Apr 2023 – Present",
+      "label": "Release Automation + AI Tooling",
+      "text": "Automated the full release management pipeline using Ansible, Python, and Terraform, eliminating a fully manual process involving artifact downloads, network drive transfers, and manual configuration across distributed infrastructure. Extended with AI tooling as one of the earliest adopters at the firm, with a pragmatic view of where automation creates leverage versus introducing risk.",
+      "tags": ["automation", "ansible", "python", "terraform", "devops", "cicd", "pipelines", "ai", "ml", "release-management", "infrastructure"],
+      "quantified": false,
+      "priority": 8
+    },
+
+    {
+      "id": "nomura-runtime-config",
+      "company": "Nomura",
+      "title": "Software Engineer",
+      "dates": "Apr 2023 – Present",
+      "label": "Platform Feature Development",
+      "text": "Designed a shared runtime configuration service in C#/.NET using the Chain of Responsibility pattern, providing composable hierarchical resolution of settings across process, group, and host segment boundaries — a shared capability consumed by multiple engineering teams.",
+      "tags": ["csharp", "dotnet", "backend", "platform", "design-patterns", "distributed-systems", "configuration", "api"],
+      "quantified": false,
+      "priority": 7
+    },
+
+    {
+      "id": "nomura-kdb-migration",
+      "company": "Nomura",
+      "title": "Software Engineer",
+      "dates": "Apr 2023 – Present",
+      "label": "KDB Migration",
+      "text": "Migrated stress test result data from a relational SQL database to KDB using C#/.NET, managing schema translation, validation, and zero-downtime cutover for a critical downstream risk system, improving query performance and storage efficiency.",
+      "tags": ["migration", "database", "kdb", "sql", "csharp", "dotnet", "backend", "data-engineering", "finance"],
+      "quantified": false,
+      "priority": 6
+    },
+
+    {
+      "id": "spotify-bigtable-service",
+      "company": "Spotify",
+      "title": "Software Engineer Apprentice",
+      "dates": "Aug 2022 – Dec 2022",
+      "label": "Backend Data Service",
+      "text": "Built a Java/gRPC backend service on Bigtable processing 30TB of user data, enabling leaderboard ranking sharing across 6,600+ listeners and ~3,500 artists.",
+      "tags": ["java", "grpc", "bigtable", "gcp", "backend", "distributed-systems", "api", "data-engineering"],
+      "quantified": true,
+      "priority": 8
+    },
+
+    {
+      "id": "spotify-live-rooms",
+      "company": "Spotify",
+      "title": "Software Engineer Apprentice",
+      "dates": "Aug 2022 – Dec 2022",
+      "label": "Live Artist Rooms",
+      "text": "Optimized Live Artist Rooms using Java, gRPC, and CloudSQL, enabling 40+ artists to test a revenue-generating feature that generated $18,000+ in gross sales volume.",
+      "tags": ["java", "grpc", "cloudsql", "gcp", "backend", "api", "performance"],
+      "quantified": true,
+      "priority": 7
+    },
+
+    {
+      "id": "spotify-fan-access",
+      "company": "Spotify",
+      "title": "Software Engineer Apprentice",
+      "dates": "Aug 2022 – Dec 2022",
+      "label": "Fan Access & Scheduling",
+      "text": "Enhanced the fan access scheduling flow in Scala and Java using QuickSilver, resulting in 95%+ of attendees rating the feature positively.",
+      "tags": ["scala", "java", "backend", "scheduling"],
+      "quantified": true,
+      "priority": 6
+    },
+
+    {
+      "id": "spotify-rsvp",
+      "company": "Spotify",
+      "title": "Software Engineer Apprentice",
+      "dates": "Aug 2022 – Dec 2022",
+      "label": "RSVP Management",
+      "text": "Updated RSVP data management for 15,000+ fan accounts via Java/gRPC service methods with CloudSQL persistence and JUnit test coverage.",
+      "tags": ["java", "grpc", "cloudsql", "gcp", "backend", "api", "testing", "junit"],
+      "quantified": true,
+      "priority": 5
+    }
+
+  ],
+
+  "education": [
+    {
+      "institution": "City University of New York, Lehman College",
+      "degree": "BA in Psychology",
+      "date": "Jun 2012"
+    }
+  ],
+
+  "todo": [
+    "➕ ADD: Any Go or Python work at Nomura not yet captured as a bullet",
+    "➕ ADD: GitHub and LinkedIn URLs to contact section",
+    "➕ ADD: Any side projects or open source work worth including"
+  ]
+}

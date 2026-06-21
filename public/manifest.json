@@ -1,0 +1,16 @@
+{
+  "name": "Resume Tailor",
+  "short_name": "Tailor",
+  "description": "Tailor your resume to any job description",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#111827",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
