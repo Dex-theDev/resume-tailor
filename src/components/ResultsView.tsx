@@ -1,5 +1,8 @@
+import { useState } from 'react'
+import { pdf } from '@react-pdf/renderer'
 import type { TailorResponse, ResumePool } from '../types'
 import ScoreBar from './ScoreBar'
+import ResumePDF from './ResumePDF'
 
 interface Props {
   result: TailorResponse
@@ -8,6 +11,23 @@ interface Props {
 }
 
 export default function ResultsView({ result, pool, onReset }: Props) {
+  const [exporting, setExporting] = useState(false)
+
+  const handleExport = async () => {
+    setExporting(true)
+    try {
+      const blob = await pdf(<ResumePDF result={result} pool={pool} />).toBlob()
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `${pool.contact.name.toLowerCase().replace(' ', '-')}-resume.pdf`
+      a.click()
+      URL.revokeObjectURL(url)
+    } finally {
+      setExporting(false)
+    }
+  }
+
   const byCompany = result.selectedBullets.reduce<Record<string, typeof result.selectedBullets>>(
     (acc, bullet) => {
       if (!acc[bullet.company]) acc[bullet.company] = []
@@ -118,11 +138,12 @@ export default function ResultsView({ result, pool, onReset }: Props) {
       <div className="fixed bottom-0 left-0 right-0 p-4 backdrop-blur-sm border-t border-indigo-100" style={{ background: 'rgba(238, 242, 255, 0.85)' }}>
         <div className="max-w-2xl mx-auto">
           <button
-            className="w-full text-white text-sm font-semibold py-4 rounded-2xl active:scale-95 transition-all shadow-lg shadow-purple-200"
+            className="w-full text-white text-sm font-semibold py-4 rounded-2xl active:scale-95 transition-all shadow-lg shadow-purple-200 disabled:opacity-60"
             style={{ background: 'linear-gradient(to right, #4f46e5, #9333ea)' }}
-            onClick={() => alert('PDF export coming in Phase 3')}
+            onClick={handleExport}
+            disabled={exporting}
           >
-            Export PDF ↓
+            {exporting ? 'Generating PDF...' : 'Export PDF ↓'}
           </button>
         </div>
       </div>
