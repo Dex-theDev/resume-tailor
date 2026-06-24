@@ -65,9 +65,10 @@ export default async function handler(req: any, res: any) {
     messages: [{ role: 'user', content: PROMPT(jd, pool) }],
   })
 
-  // Parse response
+  // Parse response — strip markdown code fences if present
   const raw = message.content[0].type === 'text' ? message.content[0].text : ''
-  const parsed = JSON.parse(raw.trim())
+  const cleaned = raw.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '')
+  const parsed = JSON.parse(cleaned)
 
   // Reconstruct full objects from IDs, applying any bullet modifications
   const selectedBullets = parsed.selectedBulletIds
