@@ -159,7 +159,7 @@
       "title": "Software Engineer Apprentice",
       "dates": "Aug 2022 – Dec 2022",
       "label": "Backend Data Service",
-      "text": "Built a Java/gRPC backend service on Bigtable processing 30TB of user data, enabling leaderboard ranking sharing across 6,600+ listeners and ~3,500 artists.",
+      "text": "Built a Java/gRPC backend service on GCP Bigtable processing 30TB of user data, enabling leaderboard ranking sharing across 6,600+ listeners and ~3,500 artists. Designed the service API and data access layer for low-latency reads at scale, ensuring reliable delivery of ranking data under concurrent load.",
       "tags": ["java", "grpc", "bigtable", "gcp", "backend", "distributed-systems", "api", "data-engineering"],
       "quantified": true,
       "priority": 8
@@ -171,7 +171,7 @@
       "title": "Software Engineer Apprentice",
       "dates": "Aug 2022 – Dec 2022",
       "label": "Live Artist Rooms",
-      "text": "Optimized Live Artist Rooms using Java, gRPC, and CloudSQL, enabling 40+ artists to test a revenue-generating feature that generated $18,000+ in gross sales volume.",
+      "text": "Optimized Live Artist Rooms using Java, gRPC, and CloudSQL, enabling 40+ artists to test a revenue-generating feature that generated $18,000+ in gross sales volume. Identified and resolved backend bottlenecks impacting session stability, improving reliability for real-time artist-fan interactions.",
       "tags": ["java", "grpc", "cloudsql", "gcp", "backend", "api", "performance"],
       "quantified": true,
       "priority": 7
@@ -183,7 +183,7 @@
       "title": "Software Engineer Apprentice",
       "dates": "Aug 2022 – Dec 2022",
       "label": "Fan Access & Scheduling",
-      "text": "Enhanced the fan access scheduling flow in Scala and Java using QuickSilver, resulting in 95%+ of attendees rating the feature positively.",
+      "text": "Enhanced the fan access scheduling flow in Scala and Java using QuickSilver, resulting in 95%+ of attendees rating the feature positively. Collaborated cross-functionally with product and ops to understand scheduling edge cases and deliver a robust, production-ready solution.",
       "tags": ["scala", "java", "backend", "scheduling"],
       "quantified": true,
       "priority": 6
@@ -195,7 +195,7 @@
       "title": "Software Engineer Apprentice",
       "dates": "Aug 2022 – Dec 2022",
       "label": "RSVP Management",
-      "text": "Updated RSVP data management for 15,000+ fan accounts via Java/gRPC service methods with CloudSQL persistence and JUnit test coverage.",
+      "text": "Updated RSVP data management for 15,000+ fan accounts via Java/gRPC service methods with CloudSQL persistence and JUnit test coverage. Ensured data consistency and correctness across concurrent write paths, with thorough unit and integration testing to support confident production rollout.",
       "tags": ["java", "grpc", "cloudsql", "gcp", "backend", "api", "testing", "junit"],
       "quantified": true,
       "priority": 5

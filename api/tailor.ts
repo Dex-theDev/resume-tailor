@@ -34,6 +34,7 @@ STRICT RULES:
 - NEVER inject a keyword that is only loosely related to what the bullet describes (e.g. do not add "A/B testing" to a CI/CD pipeline bullet)
 - NEVER repeat the same injected phrase across multiple bullets
 - Skills list must only contain skills the JD explicitly or strongly implicitly asks for — omit everything else even if the candidate has it
+- CONSISTENCY: After selecting bullets, scan each bullet's text for specific named technologies (languages, frameworks, tools, databases, platforms). Any named technology that appears in a selected bullet MUST also appear in selectedSkillNames — add it even if the JD didn't explicitly mention it. A resume must never reference a tool in a bullet that is absent from the skills section.
 - Summary selection must match the dominant technical theme of the JD, not just the closest tag overlap
 - Return only valid JSON, no markdown, no explanation
 
