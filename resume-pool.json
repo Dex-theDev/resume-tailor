@@ -20,6 +20,11 @@
       "text": "Backend and infrastructure engineer with experience building distributed systems, automating deployment pipelines, and modernizing platform infrastructure at enterprise scale. Track record of reducing operational overhead through automation and owning critical systems across multi-region production environments at Nomura and Spotify."
     },
     {
+      "id": "backend-api-python-java",
+      "tags": ["backend", "python", "java", "api", "rest-api", "microservices", "distributed-systems", "scalability", "saas", "fullstack"],
+      "text": "Backend engineer with experience designing and building scalable APIs, distributed systems, and production-grade services across Python, Java, Go, and TypeScript. Track record of end-to-end ownership across service design, data integration, and multi-environment deployment at Nomura and Spotify, with a focus on reliability, clean API contracts, and cross-functional delivery."
+    },
+    {
       "id": "caching-datastore-focused",
       "tags": ["backend", "caching", "redis", "valkey", "distributed-systems", "high-availability", "observability", "kubernetes", "go", "python"],
       "text": "Backend and infrastructure engineer with hands-on experience designing and operating large-scale distributed caching systems using Valkey and Redis. Track record of end-to-end ownership across in-memory datastore architecture, multi-region deployment, and production reliability at enterprise scale. Experienced in Go, Python, and Kubernetes, with a focus on high-availability, observability, and infrastructure automation."

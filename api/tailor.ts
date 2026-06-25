@@ -86,8 +86,13 @@ export default async function handler(req: any, res: any) {
     })
     .filter(Boolean)
 
+  // Start with AI-selected skills, then enforce consistency:
+  // any skill whose name appears (case-insensitive) in a selected bullet's text
+  // must be included, even if the AI omitted it.
+  const bulletText = selectedBullets.map((b: any) => b.text.toLowerCase()).join(' ')
   const selectedSkills = pool.skills.filter((s: any) =>
-    parsed.selectedSkillNames.includes(s.name)
+    parsed.selectedSkillNames.includes(s.name) ||
+    bulletText.includes(s.name.toLowerCase())
   )
 
   const summary = pool.summary_variants.find(
