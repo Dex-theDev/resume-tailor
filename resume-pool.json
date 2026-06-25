@@ -70,6 +70,18 @@
   "bullets": [
 
     {
+      "id": "nomura-gap-hedger",
+      "company": "Nomura",
+      "title": "Software Engineer",
+      "dates": "Apr 2023 – Present",
+      "label": "Gap Hedger — Risk Management Tool",
+      "text": "Built a real-time risk management platform in Python and Vite/TypeScript for the Structured Desk, which manages hundreds of millions of dollars in client exposure. Consumed live position data from Euclid (internal risk system) via Solace messaging and options data from an external publisher to calculate scenario headroom, surface low and negative headroom alerts, and generate unwind recommendations — enabling the desk to proactively manage risk and reduce hedging costs. Deployed on Kubernetes.",
+      "tags": ["python", "react", "typescript", "javascript", "vite", "frontend", "backend", "fullstack", "kubernetes", "k8s", "rest-api", "api", "finance", "trading", "data-integration", "real-time", "risk", "solace", "messaging", "pubsub", "event-driven"],
+      "quantified": true,
+      "priority": 9
+    },
+
+    {
       "id": "nomura-caching",
       "company": "Nomura",
       "title": "Software Engineer",
@@ -87,7 +99,7 @@
       "title": "Software Engineer",
       "dates": "Apr 2023 – Present",
       "label": "Platform Modernization",
-      "text": "Built Go-based authentication microservices with clean API contracts, authored Helm charts and Dockerfiles for containerized deployment on a Rancher Kubernetes cluster, and managed cloud infrastructure provisioning across AWS and GCP using Terraform and Ansible — owning the full lifecycle from service design through production rollout.",
+      "text": "Built Go-based authentication microservices with clean API contracts and unit test coverage, authored Helm charts and Dockerfiles for containerized deployment on a Rancher Kubernetes cluster, and managed cloud infrastructure provisioning across AWS and GCP using Terraform and Ansible — owning the full lifecycle from service design through production rollout.",
       "tags": ["go", "golang", "microservices", "kubernetes", "k8s", "helm", "docker", "containers", "terraform", "ansible", "aws", "gcp", "infrastructure", "devops", "backend", "api"],
       "quantified": false,
       "priority": 9

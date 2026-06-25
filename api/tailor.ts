@@ -4,7 +4,7 @@ const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 const MODEL = 'claude-haiku-4-5-20251001'
 
 const PROMPT = (jd: string, pool: any) => `
-You are a resume optimization expert. Given a job description and a candidate's content pool, select and optimize resume content for maximum ATS keyword matching.
+You are a resume optimization expert. Given a job description and a candidate's content pool, select and optimize the resume content for maximum ATS keyword alignment.
 
 JOB DESCRIPTION:
 ${jd}
@@ -21,18 +21,21 @@ Bullets:
 ${JSON.stringify(pool.bullets.map((b: any) => ({ id: b.id, label: b.label, text: b.text, tags: b.tags, quantified: b.quantified, priority: b.priority })), null, 2)}
 
 YOUR TASKS:
-1. Extract the most important required and preferred keywords/skills from the JD
-2. Select 6-8 bullets that best match the JD — prioritize quantified bullets and tag overlap
-3. Select the most relevant summary variant
-4. Select only the skills relevant to this role
-5. Find required JD keywords missing from selected bullets
-6. For up to 3 missing keywords genuinely covered by the candidate's work, modify the most relevant bullet to naturally include the term
-7. Estimate keyword match score before and after (0-100)
+1. Extract required and preferred keywords from the JD (technologies, skills, methodologies, domain terms)
+2. Select 6-8 bullets that best match the JD — prefer quantified bullets and strong tag overlap; deprioritize pure DevOps/infra bullets if the role is backend service or product focused
+3. Select the summary variant whose primary focus best matches the role's PRIMARY skill requirement (e.g. if the JD leads with Go and distributed systems, pick the Go/distributed summary — not an infra-ops one)
+4. Select only skills that appear in the JD or are directly implied by it — actively exclude skills the JD does not mention
+5. Identify required JD keywords genuinely missing from your selected bullets
+6. For up to 3 of those keywords: inject the term into the most relevant bullet ONLY if the work substantively covered it — not tangentially. Do not inject keywords that are a stretch. If unsure, skip the injection.
+7. Estimate keyword match score before and after tailoring (0-100)
 
-RULES:
-- Only inject keywords the candidate's work legitimately covered — do not fabricate
-- Keep injected text natural, not forced
-- Return only valid JSON, no other text
+STRICT RULES:
+- NEVER remove or paraphrase specific numbers, percentages, or dollar amounts from bullet text — preserve all quantified metrics exactly as written
+- NEVER inject a keyword that is only loosely related to what the bullet describes (e.g. do not add "A/B testing" to a CI/CD pipeline bullet)
+- NEVER repeat the same injected phrase across multiple bullets
+- Skills list must only contain skills the JD explicitly or strongly implicitly asks for — omit everything else even if the candidate has it
+- Summary selection must match the dominant technical theme of the JD, not just the closest tag overlap
+- Return only valid JSON, no markdown, no explanation
 
 Return this exact JSON structure:
 {
@@ -61,7 +64,7 @@ export default async function handler(req: any, res: any) {
   // Call Claude
   const message = await client.messages.create({
     model: MODEL,
-    max_tokens: 1024,
+    max_tokens: 2048,
     messages: [{ role: 'user', content: PROMPT(jd, pool) }],
   })
 
