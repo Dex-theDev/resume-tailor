@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "1.0",
-    "last_updated": "2026-06-14",
+    "last_updated": "2026-06-28",
     "notes": "Source of truth for all resume content. Add new bullets here as you recall more work. The app selects and filters this pool per JD — nothing here appears on a resume unless selected."
   },
 
@@ -17,22 +17,22 @@
     {
       "id": "backend-infra-general",
       "tags": ["backend", "infrastructure", "distributed-systems", "automation", "cicd"],
-      "text": "Backend and infrastructure engineer with experience building distributed systems, automating deployment pipelines, and modernizing platform infrastructure at enterprise scale. Track record of reducing operational overhead through automation and owning critical systems across multi-region production environments at Nomura and Spotify."
+      "text": "Backend and infrastructure engineer with experience building distributed systems, automating deployment pipelines, and modernizing platform infrastructure at enterprise scale. At Nomura and Spotify, reduced operational overhead through automation and owned critical systems across multi-region production environments."
     },
     {
       "id": "backend-api-python-java",
       "tags": ["backend", "python", "java", "api", "rest-api", "microservices", "distributed-systems", "scalability", "saas", "fullstack"],
-      "text": "Backend engineer with experience designing and building scalable APIs, distributed systems, and production-grade services across Python, Java, Go, and TypeScript. Track record of end-to-end ownership across service design, data integration, and multi-environment deployment at Nomura and Spotify, with a focus on reliability, clean API contracts, and cross-functional delivery."
+      "text": "Backend engineer with experience designing and building scalable APIs, distributed systems, and production-grade services in Python, Java, Go, and TypeScript. At Nomura and Spotify, owned projects end to end from service design through deployment, with an emphasis on clean interfaces and reliable delivery."
     },
     {
       "id": "caching-datastore-focused",
       "tags": ["backend", "caching", "redis", "valkey", "distributed-systems", "high-availability", "observability", "kubernetes", "go", "python"],
-      "text": "Backend and infrastructure engineer with hands-on experience designing and operating large-scale distributed caching systems using Valkey and Redis. Track record of end-to-end ownership across in-memory datastore architecture, multi-region deployment, and production reliability at enterprise scale. Experienced in Go, Python, and Kubernetes, with a focus on high-availability, observability, and infrastructure automation."
+      "text": "Backend and infrastructure engineer with experience designing and operating large-scale distributed caching systems using Valkey and Redis. Has owned in-memory datastore architecture, multi-region deployment, and production reliability at enterprise scale. Works primarily in Go, Python, and Kubernetes, with emphasis on high availability, observability, and infrastructure automation."
     },
     {
       "id": "cloud-native-platform",
       "tags": ["infrastructure", "platform", "cloud", "aws", "kubernetes", "terraform", "ansible", "cicd", "go", "devops"],
-      "text": "Infrastructure and platform engineer with experience building and operating cloud-native systems at enterprise scale. Deep hands-on background in Go, AWS, Kubernetes, Terraform, and Ansible, with a track record of end-to-end ownership across CI/CD pipelines, deployment automation, and distributed infrastructure. Early adopter of AI tooling in engineering workflows."
+      "text": "Infrastructure and platform engineer with experience building and operating cloud-native systems at enterprise scale. Works primarily in Go, AWS, Kubernetes, Terraform, and Ansible, and has owned CI/CD pipelines, deployment automation, and distributed infrastructure end to end. One of the earlier AI tooling adopters at Nomura, with careful evaluation of where it creates real leverage."
     }
   ],
 
@@ -79,8 +79,8 @@
       "company": "Nomura",
       "title": "Software Engineer",
       "dates": "Apr 2023 – Present",
-      "label": "Gap Hedger — Risk Management Tool",
-      "text": "Built a real-time risk management platform in Python and Vite/TypeScript for the Structured Desk, which manages hundreds of millions of dollars in client exposure. Consumed live position data from Euclid (internal risk system) via Solace messaging and options data from an external publisher to calculate scenario headroom, surface low and negative headroom alerts, and generate unwind recommendations — enabling the desk to proactively manage risk and reduce hedging costs. Deployed on Kubernetes.",
+      "label": "Gap Hedger: Risk Management Tool",
+      "text": "Built a real-time risk management platform in Python and Vite/TypeScript for the Structured Desk, which manages hundreds of millions of dollars in client exposure. Consumed live position data from Euclid (internal risk system) via Solace messaging and options data from an external publisher to calculate scenario headroom, surface low and negative headroom alerts, and generate unwind recommendations, helping the desk manage exposure and cut hedging costs. Deployed on Kubernetes.",
       "tags": ["python", "react", "typescript", "javascript", "vite", "frontend", "backend", "fullstack", "kubernetes", "k8s", "rest-api", "api", "finance", "trading", "data-integration", "real-time", "risk", "solace", "messaging", "pubsub", "event-driven"],
       "quantified": true,
       "priority": 9
@@ -104,7 +104,7 @@
       "title": "Software Engineer",
       "dates": "Apr 2023 – Present",
       "label": "Platform Modernization",
-      "text": "Built Go-based authentication microservices with clean API contracts and unit test coverage, authored Helm charts and Dockerfiles for containerized deployment on a Rancher Kubernetes cluster, and managed cloud infrastructure provisioning across AWS and GCP using Terraform and Ansible — owning the full lifecycle from service design through production rollout.",
+      "text": "Built Go-based authentication microservices with clean API contracts and unit test coverage, authored Helm charts and Dockerfiles for containerized deployment on a Rancher Kubernetes cluster, and managed cloud infrastructure provisioning across AWS and GCP using Terraform and Ansible, with ownership from service design through production rollout.",
       "tags": ["go", "golang", "microservices", "kubernetes", "k8s", "helm", "docker", "containers", "terraform", "ansible", "aws", "gcp", "infrastructure", "devops", "backend", "api"],
       "quantified": false,
       "priority": 9
@@ -128,7 +128,7 @@
       "title": "Software Engineer",
       "dates": "Apr 2023 – Present",
       "label": "Release Automation + AI Tooling",
-      "text": "Automated the full release management pipeline using Ansible, Python, and Terraform, eliminating a fully manual process involving artifact downloads, network drive transfers, and manual configuration across distributed infrastructure. Extended with AI tooling as one of the earliest adopters at the firm, with a pragmatic view of where automation creates leverage versus introducing risk.",
+      "text": "Automated the full release management pipeline using Ansible, Python, and Terraform, eliminating a fully manual process involving artifact downloads, network drive transfers, and manual configuration across distributed infrastructure. Extended the pipeline with AI coding tools as one of the earliest adopters at the firm, applying careful evaluation before using generated code in production.",
       "tags": ["automation", "ansible", "python", "terraform", "devops", "cicd", "pipelines", "ai", "ml", "release-management", "infrastructure"],
       "quantified": false,
       "priority": 8
@@ -140,7 +140,7 @@
       "title": "Software Engineer",
       "dates": "Apr 2023 – Present",
       "label": "Platform Feature Development",
-      "text": "Designed a shared runtime configuration service in C#/.NET using the Chain of Responsibility pattern, providing composable hierarchical resolution of settings across process, group, and host segment boundaries — a shared capability consumed by multiple engineering teams.",
+      "text": "Designed a shared runtime configuration service in C#/.NET using the Chain of Responsibility pattern, providing composable hierarchical resolution of settings across process, group, and host segment boundaries, adopted across multiple engineering teams.",
       "tags": ["csharp", "dotnet", "backend", "platform", "design-patterns", "distributed-systems", "configuration", "api"],
       "quantified": false,
       "priority": 7
@@ -161,10 +161,10 @@
     {
       "id": "spotify-bigtable-service",
       "company": "Spotify",
-      "title": "Software Engineer Apprentice",
+      "title": "Software Engineer",
       "dates": "Aug 2022 – Dec 2022",
       "label": "Backend Data Service",
-      "text": "Built a Java/gRPC backend service on GCP Bigtable processing 30TB of user data, enabling leaderboard ranking sharing across 6,600+ listeners and ~3,500 artists. Designed the service API and data access layer for low-latency reads at scale, ensuring reliable delivery of ranking data under concurrent load.",
+      "text": "Built a Java/gRPC backend service on GCP Bigtable processing 30TB of user data, enabling leaderboard ranking sharing across 6,600+ listeners and ~3,500 artists. Designed the service API and data access layer for low-latency reads under concurrent load.",
       "tags": ["java", "grpc", "bigtable", "gcp", "backend", "distributed-systems", "api", "data-engineering"],
       "quantified": true,
       "priority": 8
@@ -173,10 +173,10 @@
     {
       "id": "spotify-live-rooms",
       "company": "Spotify",
-      "title": "Software Engineer Apprentice",
+      "title": "Software Engineer",
       "dates": "Aug 2022 – Dec 2022",
       "label": "Live Artist Rooms",
-      "text": "Optimized Live Artist Rooms using Java, gRPC, and CloudSQL, enabling 40+ artists to test a revenue-generating feature that generated $18,000+ in gross sales volume. Identified and resolved backend bottlenecks impacting session stability, improving reliability for real-time artist-fan interactions.",
+      "text": "Optimized Live Artist Rooms using Java, gRPC, and CloudSQL, enabling 40+ artists to test a revenue-generating feature that generated $18,000+ in gross sales volume. Tracked down and fixed backend bottlenecks that were causing session instability during live events.",
       "tags": ["java", "grpc", "cloudsql", "gcp", "backend", "api", "performance"],
       "quantified": true,
       "priority": 7
@@ -185,10 +185,10 @@
     {
       "id": "spotify-fan-access",
       "company": "Spotify",
-      "title": "Software Engineer Apprentice",
+      "title": "Software Engineer",
       "dates": "Aug 2022 – Dec 2022",
       "label": "Fan Access & Scheduling",
-      "text": "Enhanced the fan access scheduling flow in Scala and Java using QuickSilver, resulting in 95%+ of attendees rating the feature positively. Collaborated cross-functionally with product and ops to understand scheduling edge cases and deliver a robust, production-ready solution.",
+      "text": "Enhanced the fan access scheduling flow in Scala and Java using QuickSilver, with 95%+ of attendees rating the feature positively.",
       "tags": ["scala", "java", "backend", "scheduling"],
       "quantified": true,
       "priority": 6
@@ -197,10 +197,10 @@
     {
       "id": "spotify-rsvp",
       "company": "Spotify",
-      "title": "Software Engineer Apprentice",
+      "title": "Software Engineer",
       "dates": "Aug 2022 – Dec 2022",
       "label": "RSVP Management",
-      "text": "Updated RSVP data management for 15,000+ fan accounts via Java/gRPC service methods with CloudSQL persistence and JUnit test coverage. Ensured data consistency and correctness across concurrent write paths, with thorough unit and integration testing to support confident production rollout.",
+      "text": "Updated RSVP data management for 15,000+ fan accounts via Java/gRPC service methods with CloudSQL persistence and JUnit test coverage.",
       "tags": ["java", "grpc", "cloudsql", "gcp", "backend", "api", "testing", "junit"],
       "quantified": true,
       "priority": 5
@@ -208,17 +208,11 @@
 
   ],
 
-  "education": [
-    {
-      "institution": "City University of New York, Lehman College",
-      "degree": "BA in Psychology",
-      "date": "Jun 2012"
-    }
-  ],
+  "education": [],
 
   "todo": [
     "➕ ADD: Any Go or Python work at Nomura not yet captured as a bullet",
     "➕ ADD: GitHub and LinkedIn URLs to contact section",
-    "➕ ADD: Any side projects or open source work worth including"
+    "➕ ADD: Side projects or open source work (education removed to make room)"
   ]
 }

@@ -8,6 +8,7 @@ function mockResponse(pool: ResumePool): TailorResponse {
     matchScore: { before: 38, after: 81 },
     extractedKeywords: ['go', 'kubernetes', 'distributed systems', 'ci/cd', 'microservices'],
     injectedKeywords: ['microservices'],
+    companyName: 'Acme Corp',
   }
 }
 

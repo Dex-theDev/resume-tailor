@@ -1,0 +1,82 @@
+Dex Joseph dexthedeveloper@gmail.com SUMMARY Backend and infrastructure engineer with hands-on experience designing and operating large-scale distributed caching systems using Valkey and Redis. Track record of end-to-end ownership across in-memory datastore architecture, multi-region deployment, and production reliability at enterprise scale. Experienced in Go, Python, and Kubernetes, with a focus on high-availability, observability, and infrastructure automation. SKILLS Languages: Go, Python, TypeScript, Java Infrastructure: Kubernetes, AWS, GCP, Terraform, Helm, Docker Data & Caching: Valkey / Redis, CloudSQL Observability: Distributed tracing EXPERIENCE Nomura Apr 2023 – Present Software Engineer ¸ Multi-Region Distributed Caching: Architected and implemented a large-scale distributed caching layer in Go and C#/.NET using Valkey (Redis-compatible) with consistent hashing and data sharding across New York and Tokyo production environments, designing scalable backend systems with cluster topology, sharding strategy, and failover behavior—achieving a 99.99% cache hit rate across 4.1M+ requests with continuous 24/7 uptime requirements. ¸ Platform Modernization: Built Go-based authentication microservices architecture with clean API contracts and unit test coverage, authored Helm charts and Dockerfiles for containerized deployment on a Rancher Kubernetes cluster, and managed cloud infrastructure provisioning across AWS and GCP using Terraform and Ansible — owning the full lifecycle from service design through production rollout. ¸ Gap Hedger — Risk Management Tool: Built a real-time risk management platform in Python and Vite/TypeScript for the Structured Desk, which manages hundreds of millions of dollars in client exposure. Consumed live position data from Euclid (internal risk system) via Solace messaging and options data from an external publisher to calculate scenario headroom, surface low and negative headroom alerts, and generate unwind recommendations — enabling the desk to proactively manage risk and reduce hedging costs. Deployed on Kubernetes. ¸ Platform Feature Development: Designed a shared runtime configuration service in C#/.NET using the Chain of Responsibility pattern, providing composable hierarchical resolution of settings across process, group, and host segment boundaries — a shared capability consumed by multiple engineering teams. Spotify Aug 2022 – Dec 2022 Software Engineer Apprentice ¸ Backend Data Service: Built a Java/gRPC backend service on GCP Bigtable processing 30TB of user data, enabling leaderboard ranking sharing across 6,600+ listeners and ~3,500 artists. Designed the service API and data access layer for low-latency reads at scale, ensuring reliable delivery of ranking data under concurrent load. ¸ Live Artist Rooms: Optimized Live Artist Rooms using Java, gRPC, and CloudSQL, enabling 40+ artists to test a revenue-generating feature that generated $18,000+ in gross sales volume. Identified and resolved backend bottlenecks impacting session stability, improving reliability for real-time artist-fan interactions. EDUCATION City University of New York, Lehman College Jun 2012 BA in Psychology
+
+
+Dex Joseph dexthedeveloper@gmail.com SUMMARY Backend and infrastructure engineer with experience building distributed systems, automating deployment pipelines, and modernizing platform infrastructure at enterprise scale. Track record of reducing operational overhead through automation and owning critical systems across multi-region production environments at Nomura and Spotify. SKILLS Languages: Go, Python, TypeScript, C# / .NET, Java, Scala, PowerShell, Bash Infrastructure: Kubernetes, AWS EXPERIENCE Nomura Apr 2023 – Present Software Engineer - Gap Hedger — Risk Management Tool: Built a real-time risk management platform in Python and Vite/TypeScript for the Structured Desk, which manages hundreds of millions of dollars in client exposure. Consumed live position data from Euclid (internal risk system) via Solace messaging and options data from an external publisher to calculate scenario headroom, surface low and negative headroom alerts, and generate unwind recommendations — enabling the desk to proactively manage risk and reduce hedging costs. Deployed on Kubernetes. - Multi-Region Distributed Caching: Architected and implemented a large-scale distributed caching layer in Go and C#/.NET using Valkey (Redis-compatible) with consistent hashing and data sharding across New York and Tokyo production environments. Designed the cluster topology, sharding strategy, and failover behavior, achieving a 99.99% cache hit rate across 4.1M+ requests with continuous 24/7 uptime requirements. - Platform Modernization: Built Go-based authentication microservices with clean API contracts and unit test coverage, authored Helm charts and Dockerfiles for containerized deployment on a Rancher Kubernetes cluster, and managed cloud infrastructure provisioning across AWS and GCP using Terraform and Ansible — owning the full lifecycle from service design through production rollout. - Deployment Pipeline Overhaul: Redesigned the end-to-end CI/CD pipeline using Ansible, GitLab CI, Jenkins, and Terraform, reducing deployment time from 6–8 hours to ~1.5 hours (~80% reduction) across hundreds of production services. Introduced symlink-based parallel deployment for near-zero downtime rollouts across Linux and Windows infrastructure. - Release Automation + AI Tooling: Automated the full release management pipeline using Ansible, Python, and Terraform, eliminating a fully manual process involving artifact downloads, network drive transfers, and manual configuration across distributed infrastructure. Extended with AI tooling as one of the earliest adopters at the firm, with a pragmatic view of where automation creates leverage versus introducing risk. - Platform Feature Development: Designed a shared runtime configuration service in C#/.NET using the Chain of Responsibility pattern, providing composable hierarchical resolution of settings across process, group, and host segment boundaries — a shared capability consumed by multiple engineering teams. EDUCATION City University of New York, Lehman College Jun 2012 BA in Psychology
+
+
+
+DEX JOSEPH
+dexthedeveloper@gmail.com
+
+SUMMARY
+
+Backend engineer with experience designing and operating large-scale, real-time distributed systems in production. Proficient in Go, Java, and Python, with a track record of end-to-end ownership across high-throughput, low-latency services on AWS and GCP. Early adopter of AI development tooling with a practical approach to applying it safely and without sacrificing code quality.
+SKILLS
+
+Languages:  Go, Java, Python, TypeScript, C# / .NET, PowerShell, Bash, Scala
+Infrastructure:  Kubernetes, Helm, Docker, GitLab CI, Jenkins, Ansible, Terraform
+Protocols:  gRPC, Protobuf, REST
+Data & Caching:  Redis / Valkey, SQL, PostgreSQL, Bigtable, CloudSQL, KDB, Solace
+Cloud:  AWS, GCP
+Frontend:  React, Vite
+EXPERIENCE
+
+Nomura  -  Software Engineer	Apr 2023 - Present | New York, NY
+Euclid Risk Management System - hundreds of production services, 12TB of financial data
+> Multi-Region Distributed Caching: Designed and implemented a distributed caching layer in Go using Valkey (Redis-compatible) with consistent hashing and data sharding across New York and Tokyo production environments, achieving a 99.99% cache hit rate across 4.1M+ requests. Applied CAP Theorem tradeoffs to balance consistency and availability under regional failure conditions.
+> Platform Modernization: Built Go-based authentication microservices with clean API contracts using gRPC and REST, authored Helm charts and Dockerfiles for containerized deployment on Kubernetes, and designed full service lifecycle from interface definition through production rollout as part of a greenfield infrastructure modernization initiative.
+> Deployment Pipeline Overhaul: Redesigned the end-to-end CI/CD pipeline using Ansible, GitLab CI, and Jenkins, reducing deployment time from 6-8 hours to ~1.5 hours (~80% reduction) across hundreds of production services. Introduced symlink-based parallel deployment for near-zero downtime rollouts across Linux and Windows infrastructure.
+> Release Automation + AI Tooling: Automated the full release management pipeline using Ansible and Python, eliminating a manual process across distributed infrastructure. Extended the pipeline with AI coding and observability tooling as one of the earliest adopters at the firm, evaluating generated code rigorously for correctness, security, and long-term maintainability.
+> Platform Feature Development: Designed a shared runtime configuration service in C#/.NET using the Chain of Responsibility pattern, providing composable hierarchical resolution of settings across process, group, and host segment boundaries. Delivered as a shared library consumed by multiple engineering teams.
+> KDB Migration: Migrated stress test result data from a relational database to KDB using C#/.NET, improving query performance and storage efficiency for a critical downstream risk system.
+Spotify  -  Software Engineer Apprentice	Aug 2022 - Dec 2022 | New York, NY
+> Backend Data Service: Built a Java/gRPC/Protobuf backend service on Bigtable processing 30TB of user data, enabling leaderboard ranking sharing across 6,600+ listeners and ~3,500 artists.
+> Live Artist Rooms: Optimized Live Artist Rooms using Java, gRPC, and CloudSQL, enabling 40+ artists to test a revenue-generating feature that generated $18,000+ in gross sales volume.
+> Fan Access & Scheduling: Enhanced the fan access scheduling flow in Scala and Java using QuickSilver, resulting in 95%+ of attendees rating the feature positively.
+> RSVP Management: Updated RSVP data management for 15,000+ fan accounts via Java/gRPC service methods with CloudSQL persistence and JUnit test coverage.
+
+
+DEX JOSEPH
+dexthedeveloper@gmail.com
+SUMMARY
+Backend engineer with experience building high-volume, low-latency distributed systems across multi-region production
+environments. Proven track record of designing and operating scalable microservices on AWS and Kubernetes, with a
+focus on reliability, observability, and continuous delivery. Experienced integrating AI tooling into engineering workflows
+as an early adopter at enterprise scale.
+SKILLS
+Languages: Python, Go, C# / .NET, TypeScript, PowerShell, Bash, Java, Scala
+Infrastructure: AWS, Kubernetes (Rancher), Helm, Docker, GitLab CI, Jenkins, Ansible, Autosys
+Data & Caching: Valkey / Redis (ElastiCache-compatible), KDB, SQL, Bigtable, CloudSQL, Solace
+Frontend: React, Vite
+EXPERIENCE
+Nomura - Software Engineer Apr 2023 - Present | New York, NY
+Euclid Risk Management System - hundreds of production services, 12TB of financial data
+> Multi-Region Distributed Caching: Architected and implemented a high-volume distributed caching layer using Valkey
+(Redis/ElastiCache-compatible) with consistent hashing and data sharding across New York and Tokyo production
+environments, achieving a 99.99% cache hit rate across 4.1M+ requests.
+> Deployment Pipeline Overhaul: Redesigned the CI/CD pipeline using Ansible, GitLab CI, and Jenkins, reducing
+deployment time from 6-8 hours to ~1.5 hours (~80% reduction) across hundreds of production services. Introduced
+symlink-based parallel deployment for near-zero downtime rollouts, with cross-platform automation in Python and
+PowerShell across Windows and Linux hosts.
+> Release Automation: Automated the end-to-end release management pipeline using Ansible and Python, eliminating a
+fully manual process across distributed infrastructure - later extended with AI tooling as one of the earliest adopters at
+the firm.
+> Platform Modernization: Built Go-based authentication microservices and authored Helm charts and Dockerfiles for
+containerized deployment on a Rancher Kubernetes cluster as part of a greenfield infrastructure modernization
+initiative.
+> KDB Migration: Migrated stress test result data from a relational database to KDB using C#/.NET, improving query
+performance and storage efficiency for a critical downstream risk system.
+> Platform Feature Development: Designed a runtime configuration rules engine in C#/.NET using the Chain of
+Responsibility pattern, enabling hierarchical resolution of process version settings across individual processes, process
+groups, and host segments.
+Spotify - Software Engineer Apprentice Aug 2022 - Dec 2022 | New York, NY
+> Backend Data Service: Built a Java/gRPC backend service on Bigtable processing 30TB of user data, enabling
+leaderboard ranking sharing across 6,600+ listeners and ~3,500 artists.
+> Live Artist Rooms: Optimized Live Artist Rooms using Java, gRPC, and CloudSQL, enabling 40+ artists to test a
+revenue-generating feature that generated $18,000+ in gross sales volume.
+> Fan Access & Scheduling: Enhanced the fan access scheduling flow in Scala and Java using QuickSilver, resulting in 95%+
+of attendees rating the feature positively.
+> RSVP Management: Updated RSVP data management for 15,000+ fan accounts via Java/gRPC service methods with
+CloudSQL persistence and JUnit test coverage.
+EDUCATION
+City University of New York, Lehman College - BA in Psychology Jun 2012

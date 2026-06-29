@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import { pdf } from '@react-pdf/renderer'
 import type { TailorResponse, ResumePool } from '../types'
 import ScoreBar from './ScoreBar'
-import ResumePDF from './ResumePDF'
+import { generateDocx } from '../lib/generateDocx'
 
 interface Props {
   result: TailorResponse
@@ -12,15 +11,17 @@ interface Props {
 
 export default function ResultsView({ result, pool, onReset }: Props) {
   const [exporting, setExporting] = useState(false)
+  const [companyName, setCompanyName] = useState(result.companyName)
 
   const handleExport = async () => {
     setExporting(true)
     try {
-      const blob = await pdf(<ResumePDF result={result} pool={pool} />).toBlob()
+      const blob = await generateDocx(result, pool)
       const url = URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
-      a.download = `${pool.contact.name.toLowerCase().replace(' ', '-')}-resume.pdf`
+      const slug = companyName.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+      a.download = slug ? `dex-resume-${slug}.docx` : 'dex-resume.docx'
       a.click()
       URL.revokeObjectURL(url)
     } finally {
@@ -136,14 +137,33 @@ export default function ResultsView({ result, pool, onReset }: Props) {
 
       {/* Sticky export */}
       <div className="fixed bottom-0 left-0 right-0 p-4 backdrop-blur-sm border-t border-indigo-100" style={{ background: 'rgba(238, 242, 255, 0.85)' }}>
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto flex flex-col gap-2">
+          <div className="relative">
+            <label className="text-xs font-semibold text-indigo-400 uppercase tracking-widest block mb-1">Company (optional)</label>
+            <input
+              type="text"
+              value={companyName}
+              onChange={(e) => setCompanyName(e.target.value)}
+              placeholder="e.g. Stripe"
+              className="w-full text-sm text-gray-700 bg-white border border-indigo-200 rounded-xl px-3 py-2 pr-8 focus:outline-none focus:border-indigo-400"
+            />
+            {companyName && (
+              <button
+                onClick={() => setCompanyName('')}
+                className="absolute right-2 top-[1.75rem] text-gray-400 hover:text-gray-600 text-xs"
+                aria-label="Clear company name"
+              >
+                ✕
+              </button>
+            )}
+          </div>
           <button
             className="w-full text-white text-sm font-semibold py-4 rounded-2xl active:scale-95 transition-all shadow-lg shadow-purple-200 disabled:opacity-60"
             style={{ background: 'linear-gradient(to right, #4f46e5, #9333ea)' }}
             onClick={handleExport}
             disabled={exporting}
           >
-            {exporting ? 'Generating PDF...' : 'Export PDF ↓'}
+            {exporting ? 'Generating DOCX...' : 'Export DOCX ↓'}
           </button>
         </div>
       </div>

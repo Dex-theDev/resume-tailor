@@ -1,4 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk'
+import { buildTailorResult } from './buildTailorResult'
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 const MODEL = 'claude-haiku-4-5-20251001'
@@ -28,6 +29,7 @@ YOUR TASKS:
 5. Identify required JD keywords genuinely missing from your selected bullets
 6. For up to 3 of those keywords: inject the term into the most relevant bullet ONLY if the work substantively covered it — not tangentially. Do not inject keywords that are a stretch. If unsure, skip the injection.
 7. Estimate keyword match score before and after tailoring (0-100)
+8. Extract the hiring company name from the job description. If the company is not clearly stated, return an empty string.
 
 STRICT RULES:
 - NEVER remove or paraphrase specific numbers, percentages, or dollar amounts from bullet text — preserve all quantified metrics exactly as written
@@ -47,7 +49,8 @@ Return this exact JSON structure:
   "injectedKeywords": ["keyword1"],
   "modifiedBullets": { "bullet-id": "full modified bullet text here" },
   "matchScoreBefore": 40,
-  "matchScoreAfter": 78
+  "matchScoreAfter": 78,
+  "companyName": "Stripe"
 }
 `
 
@@ -74,40 +77,5 @@ export default async function handler(req: any, res: any) {
   const cleaned = raw.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '')
   const parsed = JSON.parse(cleaned)
 
-  // Reconstruct full objects from IDs, applying any bullet modifications
-  const selectedBullets = parsed.selectedBulletIds
-    .map((id: string) => {
-      const bullet = pool.bullets.find((b: any) => b.id === id)
-      if (!bullet) return null
-      if (parsed.modifiedBullets?.[id]) {
-        return { ...bullet, text: parsed.modifiedBullets[id] }
-      }
-      return bullet
-    })
-    .filter(Boolean)
-
-  // Start with AI-selected skills, then enforce consistency:
-  // any skill whose name appears (case-insensitive) in a selected bullet's text
-  // must be included, even if the AI omitted it.
-  const bulletText = selectedBullets.map((b: any) => b.text.toLowerCase()).join(' ')
-  const selectedSkills = pool.skills.filter((s: any) =>
-    parsed.selectedSkillNames.includes(s.name) ||
-    bulletText.includes(s.name.toLowerCase())
-  )
-
-  const summary = pool.summary_variants.find(
-    (sv: any) => sv.id === parsed.selectedSummaryId
-  ) ?? pool.summary_variants[0]
-
-  return res.status(200).json({
-    selectedBullets,
-    selectedSkills,
-    summary,
-    matchScore: {
-      before: parsed.matchScoreBefore,
-      after: parsed.matchScoreAfter,
-    },
-    extractedKeywords: parsed.extractedKeywords,
-    injectedKeywords: parsed.injectedKeywords,
-  })
+  return res.status(200).json(buildTailorResult(pool, parsed))
 }

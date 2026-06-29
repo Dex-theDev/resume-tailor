@@ -47,6 +47,7 @@ export interface TailorResponse {
   matchScore: { before: number; after: number }
   extractedKeywords: string[]
   injectedKeywords: string[]
+  companyName: string
 }
 
 export type AppState = 'idle' | 'loading' | 'results'
